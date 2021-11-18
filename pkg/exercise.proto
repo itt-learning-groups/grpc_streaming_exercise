@@ -1,1 +1,18 @@
 syntax = "proto3";
+
+package numberservice;
+
+option go_package = "gitlab.gs.kount.com/kount/Luke/daily_notes/2021/go_fund_cource/learn&Kount/grpc_streaming-exercise/pkg/numberservice;numberservice";
+
+service NumberService {
+    rpc GetNumbers(GetNumbersRequest) returns (stream GetNumbersResponse) {};
+    rpc SendNumbers(stream SendNumbersRequest) returns (SendNumberResponse) {};
+}
+
+message GetNumbersRequest {};
+
+message GetNumbersResponse {};
+
+message SendNumbersRequest {};
+
+message SendNumberResponse {};
